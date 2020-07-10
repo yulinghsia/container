@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write",
-    "start": "PORT=3000 react-app-rewired start",
+    "start": "set PORT=3000 && react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test"
+    "test": "react-app-rewired test",
+    "deploy": "aws s3 sync build/ s3://demo.letusdoit.design --delete"
   },
   "dependencies": {
     "react": "^16.4.0",
